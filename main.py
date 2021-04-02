@@ -3,20 +3,20 @@ from modules import *
 from modules.deposit import Deposit
 
 def main():
-    First_bank = Credit(bank_name = "Tikva", bank_type = BankType.NATIONAL, is_available = True, interest_rate = 15, credit_type = CretidType.PUBLIC,
-                credit_term = CretidTerm.SHORT_TERM, method_of_lending = Lending.COMERCIAL , collateral_loans = "Mortgage real estate", consumer_loans = 'Commodity', credit_interest= 22)
+    First_bank = Credit( "Tikva", BankType.NATIONAL, True, 15, CretidType.PUBLIC, 
+                        CretidTerm.SHORT_TERM , Lending.COMERCIAL, "Mortgage real estate", "Commodity", 22)
 
-    Second_bank = Deposit(bank_name = "Popular Bank", bank_type = BankType.COMERCIAL, is_available = False, interest_rate = 10, deposit_term = 44 , deposit_type = DepositType.SAVINGS)
+    Second_bank = Deposit("Popular Bank", BankType.COMERCIAL, False, 10, 44 , DepositType.SAVINGS)
 
-    Third_bank = Credit(bank_name = "Money for you", bank_type = BankType.NATIONAL , is_available = True, interest_rate = 33, credit_type = CretidType.BANKING ,
-                credit_term = CretidTerm.LONG_TERM , method_of_lending = Lending.COMMODITY , collateral_loans = "Tesla shares", consumer_loans = 'Cash', credit_interest= 10)
+    Third_bank = Credit("Money for you", BankType.NATIONAL, True, 33, CretidType.BANKING,
+                        CretidTerm.LONG_TERM, Lending.COMMODITY, "Tesla shares", 'Cash', 10)
 
-    Fourth_bank = Credit(bank_name = "Free Money", bank_type = BankType.COMERCIAL , is_available = False, interest_rate = 3, credit_type = CretidType.BANKING ,
-                credit_term = CretidTerm.LONG_TERM , method_of_lending = Lending.COMMODITY , collateral_loans = "Apple shares", consumer_loans = 'Cash', credit_interest= 100)
+    Fourth_bank = Credit("Free Money", BankType.COMERCIAL, False, 3, CretidType.BANKING,
+                        CretidTerm.LONG_TERM, Lending.COMMODITY, "Apple shares", 'Cash', 100)
 
-    Fifth_bank = Deposit(bank_name = "BankA", bank_type = BankType.NATIONAL, is_available = True, interest_rate = 11, deposit_term = 1 , deposit_type = DepositType.SAVINGS)
+    Fifth_bank = Deposit("BankA", BankType.NATIONAL, True, 11, 1, DepositType.SAVINGS)
 
-    Sixth_bank = Deposit(bank_name = "Ukraine", bank_type = BankType.COMERCIAL, is_available = False, interest_rate = 44, deposit_term = 20 , deposit_type = DepositType.UNIVERSAL)
+    Sixth_bank = Deposit("Ukraine", BankType.COMERCIAL, False, 44, 20, DepositType.UNIVERSAL)
 
     list_of_credits = []
     list_of_credits.append(First_bank)

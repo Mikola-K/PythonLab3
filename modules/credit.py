@@ -5,7 +5,8 @@ from modules.lending import Lending
 
 class Credit(BankService):
     def __init__(self, bank_name, bank_type, is_available, interest_rate,
-                 credit_type, credit_term, method_of_lending, collateral_loans, consumer_loans, credit_interest):
+                 credit_type, credit_term, method_of_lending, collateral_loans,
+                 consumer_loans, credit_interest):
         super().__init__(bank_name, bank_type, is_available, interest_rate)
         self.credit_type = credit_type
         self.credit_term = credit_term
@@ -22,5 +23,3 @@ class Credit(BankService):
                 f"Collateral loans: {self.collateral_loans}\n"\
                 f"Consumer loans: {self.consumer_loans}\n"\
                 f"Credit interest: {self.credit_interest}\n"
-
-#
