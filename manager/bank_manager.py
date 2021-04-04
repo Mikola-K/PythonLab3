@@ -16,8 +16,9 @@ class BankManager:
         found_bank_services = [bank_service for bank_service in self.bank_services if bank_service.is_available == is_available]
         return found_bank_services
        
-    def sort_by_interest_rate(self, items: list, sort_order: SortOrder):
-        items.sort(key=lambda x: x.interest_rate, reverse=sort_order.value)
+    def sort_by_interest_rate(self, bank_services = [], sort_order = SortOrder.DESC):
+        bank_services.sort(key=lambda x: x.interest_rate, reverse=sort_order.value)
+        return bank_services
 
     def print_credit_by_interest_rate(self, credits=[], sort_order=SortOrder.ASC):
         sorted_credits = deepcopy(credits)

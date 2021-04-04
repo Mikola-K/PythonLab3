@@ -1,12 +1,13 @@
 from modules.bank_service import BankService
 from modules.credit_type import CretidType
 from modules.credit_term import CretidTerm
+from modules.bank_type import BankType
 from modules.lending import Lending
 
 class Credit(BankService):
-    def __init__(self, bank_name, bank_type, is_available, interest_rate,
-                 credit_type, credit_term, method_of_lending, collateral_loans,
-                 consumer_loans, credit_interest):
+    def __init__(self, bank_name=' ', bank_type=BankType.COMERCIAL, is_available=False, interest_rate=0.0,
+                 credit_type=CretidType.BANKING, credit_term=CretidTerm.LONG_TERM, method_of_lending=Lending.COMERCIAL,
+                 collateral_loans="", consumer_loans='', credit_interest=""):
         super().__init__(bank_name, bank_type, is_available, interest_rate)
         self.credit_type = credit_type
         self.credit_term = credit_term
